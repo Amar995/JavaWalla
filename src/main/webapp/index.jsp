@@ -87,7 +87,7 @@
 			</div>
 
 			<div class="row">
-				<div class="column" style="background-color: white;">
+				<div class="column slider" style="background-color: white;">
 					<h2 style="color: #dc3545">Latest Quiz</h2>
 					<!--<marquee direction="up" style="color:#dc3545">-->
 					<%
@@ -107,7 +107,7 @@ for(int i=0;i<number;i++)
 						<%} %>
 					</table>
 				</div>
-				<div class="column" style="background-color: white;">
+				<div class="column slider" style="background-color: white;">
 					<h2 style="color: #dc3545">Latest Jobs</h2>
 
 					<%
@@ -618,6 +618,11 @@ for(int i=0;i<number;i++)
 	display: table;
 	margin: auto;
 	clear: both;
+}
+.slider {
+height:200px;
+  display: grid;
+  overflow-x: auto;
 }
 </style>
 </html>
