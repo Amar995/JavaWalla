@@ -14,6 +14,7 @@
 <meta charset="UTF-8">
 <meta name="description" content="WebUni Education Template">
 <meta name="keywords" content="webuni, education, creative, html">
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Favicon -->
 <link href="img/favicon.ico" rel="shortcut icon" />
@@ -55,10 +56,9 @@
 					</div>
 				</div>
 				<div class="col-lg-9 col-md-9">
-					<a href="indexlk.html" class="site-btn header-btn ">Sign/Sign
-						Up</a>
 					<nav class="main-menu">
 						<ul>
+						   <li><a href="indexlk.html" class="site-btn header-btn">Sign/Sign Up</a></li>
 							<li><a href="index.jsp">Home</a></li>
 							<li><a href="#">About us</a></li>
 							<li><a href="#cou">Mock Test</a></li>
@@ -496,13 +496,13 @@ for(int i=0;i<number;i++)
 						</div>
 						<div class="phone-number">
 							<span>Direct Line</span>
-							<h2>+53 345 7953 32453</h2>
+							<h2>+91 9898989898</h2>
 						</div>
 						<ul class="contact-list">
-							<li>1481 Creekside Lane <br>Avila Beach, CA 931
+							<li>Amar Nayak<br>Mangalpur,Odisha
 							</li>
-							<li>+53 345 7953 32453</li>
-							<li>yourmail@gmail.com</li>
+							<li>+917978913171</li>
+							<li>amarnayak9697@gmail.com</li>
 						</ul>
 						<div class="social-links">
 							<a href="#"><i class="fa fa-pinterest"></i></a> <a href="#"><i
@@ -529,8 +529,8 @@ for(int i=0;i<number;i++)
 						<ul class="contact-list">
 							<li>1481 Creekside Lane <br>Avila Beach, CA 931
 							</li>
-							<li>+53 345 7953 32453</li>
-							<li>yourmail@gmail.com</li>
+							<li>+989898989</li>
+							<li>amarnayak9697@gmail.com</li>
 						</ul>
 					</div>
 					<div class="widget-item">

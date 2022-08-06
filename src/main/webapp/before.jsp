@@ -65,9 +65,9 @@
 					</div>
 				</div>
 				<div class="col-lg-9 col-md-9">
-					<a  class="site-btn header-btn" id="am"><%=session.getAttribute("user")%></a>
 					<nav class="main-menu">
 						<ul>
+						<li><a  class="site-btn header-btn" id="am"><%=session.getAttribute("user")%></a></li>
 							<li><a href="before.jsp">Home</a></li>
 							<li><a href="#">About us</a></li>
 							<li><a href="#cou">Mock Test</a></li>
