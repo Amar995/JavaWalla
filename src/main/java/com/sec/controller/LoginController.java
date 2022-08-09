@@ -150,7 +150,7 @@ public class LoginController {
 
 		ModelAndView model = null;
 
-		model = new ModelAndView("redirect:/QuizInsertion.html");
+		model = new ModelAndView("redirect:/job.html");
 
 		return model;
 	}
@@ -159,7 +159,7 @@ public class LoginController {
 
 		ModelAndView model = null;
 
-		model = new ModelAndView("redirect:/QuizInsertion.html");
+		model = new ModelAndView("redirect:/job.html");
 		try {
 			it.save(job);
 			model.addObject("result", "sucess");
