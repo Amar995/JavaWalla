@@ -3,7 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page import="java.util.*,com.sec.model.Quiz"%>
+<%@ page import="java.util.*,com.sec.model.Quiz,com.sec.model.Jobs"%>
 
 
 
@@ -107,16 +107,16 @@ for(int i=0;i<number;i++)
 
 					<%
 
-List<Quiz> jobs=(List<Quiz>)session.getAttribute("xxx") ; 
+List<Jobs> jobs=(List<Jobs>)session.getAttribute("job") ; 
 %>
 					<table>
-						<%int number1=qo.size();
+						<%int number1=jobs.size();
 for(int i=0;i<number;i++)
 {
 %>
 						<tr>
 							<td><a style="color: blue; font-size: 20px"
-								href=<%=qo.get(i).getLink()%>><b><%=qo.get(i).getName()%></b></a></td>
+								href="#joi"><b><%=jobs.get(i).getcompany()%></b></a></td>
 						</tr>
 
 						<%} %>
@@ -165,10 +165,10 @@ for(int i=0;i<number;i++)
 				<div class="col-lg-4 col-md-6">
 					<div class="categorie-item">
 						<div class="ci-thumb set-bg" data-setbg="img/categories/jo.jpg"></div>
-						<div class="ci-text">
+						<div class="ci-text" id="joi">
 						<button class="button">	<h5><a href="https://javawalla.blogspot.com">Jobs</a></h5></button>
-							<p>Core Java Basic Interview Question</p>
-							<span>55 Courses</span>
+							<p>Latest Jobs</p>
+							<span>101 User</span>
 						</div>
 					</div>
 				</div>
@@ -487,9 +487,7 @@ for(int i=0;i<number;i++)
 					<div class="contact-form-warp">
 						<div class="section-title text-white text-left">
 							<h2>Get in Touch</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Donec malesuada lorem maximus mauris scelerisque, at rutrum
-								nulla dictum. Ut ac ligula sapien.</p>
+							<p></p>
 						</div>
 						<form class="contact-form">
 							<input type="text" placeholder="Your Name"> <input
@@ -504,16 +502,14 @@ for(int i=0;i<number;i++)
 					<div class="contact-info-area">
 						<div class="section-title text-left p-0">
 							<h2>Contact Info</h2>
-							<p>Donec malesuada lorem maximus mauris scelerisque, at
-								rutrum nulla dictum. Ut ac ligula sapien. Suspendi sse cursus
-								faucibus finibus.</p>
+							<p>Pune,Maharastra</p>
 						</div>
 						<div class="phone-number">
 							<span>Direct Line</span>
-							<h2>+91 9898989898</h2>
+							<h2>+917978913171</h2>
 						</div>
 						<ul class="contact-list">
-							<li>Amar Nayak<br>Mangalpur,Odisha
+							<li>Amar Nayak<br>
 							</li>
 							<li>+917978913171</li>
 							<li>amarnayak9697@gmail.com</li>
@@ -541,9 +537,9 @@ for(int i=0;i<number;i++)
 					<div class="widget-item">
 						<h4>Contact Info</h4>
 						<ul class="contact-list">
-							<li>1481 Creekside Lane <br>Avila Beach, CA 931
+							<li>
 							</li>
-							<li>+989898989</li>
+							<li>+917978913171</li>
 							<li>amarnayak9697@gmail.com</li>
 						</ul>
 					</div>

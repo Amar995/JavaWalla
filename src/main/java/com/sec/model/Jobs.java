@@ -5,11 +5,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Jobs {
 	private String name;
-	private String com;
+	private String company;
 
 	@Override
 	public String toString() {
-		return "ItJob [name=" + name + ", com=" + com + "]";
+		return "ItJob [name=" + name + ", company=" + company + "]";
 	}
 
 	public String getName() {
@@ -20,11 +20,11 @@ public class Jobs {
 		this.name = name;
 	}
 
-	public String getCom() {
-		return com;
+	public String getcompany() {
+		return company;
 	}
 
-	public void setCom(String com) {
-		this.com = com;
+	public void setcompany(String company) {
+		this.company = company;
 	}
 }

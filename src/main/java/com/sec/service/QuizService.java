@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
+import com.sec.model.Jobs;
 import com.sec.model.Quiz;
 
 @Service
@@ -23,6 +24,15 @@ public class QuizService {
 		query.with(Sort.by(Sort.Order.desc("_id")));
 		query.with(Pageable.ofSize(8));
 		List<Quiz> users = mon.find(query,Quiz.class);
+		return users;
+	}
+	
+	public List<Jobs> getJobsData()
+	{
+		Query query = new Query();
+		query.with(Sort.by(Sort.Order.desc("_id")));
+		query.with(Pageable.ofSize(8));
+		List<Jobs> users = mon.find(query,Jobs.class);
 		return users;
 	}
 }

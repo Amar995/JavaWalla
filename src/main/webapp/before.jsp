@@ -3,7 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page import="java.util.*,com.sec.model.Quiz" %>
+<%@ page import="java.util.*,com.sec.model.Quiz,com.sec.model.Jobs" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -112,14 +112,14 @@ for(int i=0;i<number;i++)
                   
 					 <%
 
-List<Quiz> qo1=(List<Quiz>)session.getAttribute("xxx") ; 
+List<Jobs> qo1=(List<Jobs>)session.getAttribute("job") ; 
 %>
 <table>
 	<%int number1=qo1.size();
 for(int i=0;i<number1;i++)
 {
 %>
-<tr><td><a  style="color:blue;font-size: 20px" href=<%=qo1.get(i).getLink()%> ><b><%=qo1.get(i).getName()%></b></a></td></tr>
+<tr><td><a  style="color:blue;font-size: 20px" href="#joi" ><b><%=qo1.get(i).getcompany()%></b></a></td></tr>
 
 <%} %></table>          </div>
           </div>
@@ -165,10 +165,10 @@ for(int i=0;i<number1;i++)
 				<div class="col-lg-4 col-md-6">
 					<div class="categorie-item">
 						<div class="ci-thumb set-bg" data-setbg="img/categories/jo.jpg"></div>
-						<div class="ci-text">
+						<div class="ci-text" id="joi">
 						<button class="button">	<h5><a href="https://javawalla.blogspot.com">Jobs</a></h5></button>
-							<p>Core Java Basic Interview Question</p>
-							<span>55 Courses</span>
+							<p>Latest Jobs</p>
+							<span>101 User</span>
 						</div>
 					</div>
 				</div>
@@ -500,7 +500,7 @@ for(int i=0;i<number1;i++)
 					<div class="contact-form-warp">
 						<div class="section-title text-white text-left">
 							<h2>Get in Touch</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. </p>
+							<p></p>
 						</div>
 						<form class="contact-form">
 							<input type="text" placeholder="Your Name">
@@ -511,35 +511,36 @@ for(int i=0;i<number1;i++)
 						</form>
 					</div>
 				</div>
-				<div class="col-lg-4">
+<div class="col-lg-4">
 					<div class="contact-info-area">
 						<div class="section-title text-left p-0">
 							<h2>Contact Info</h2>
-							<p>Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendi sse cursus faucibus finibus.</p>
+							<p>Pune,Maharastra</p>
 						</div>
 						<div class="phone-number">
 							<span>Direct Line</span>
-							<h2>+53 345 7953 32453</h2>
+							<h2>+917978913171</h2>
 						</div>
 						<ul class="contact-list">
-							<li>1481 Creekside Lane <br>Avila Beach, CA 931</li>
-							<li>+53 345 7953 32453</li>
-							<li>yourmail@gmail.com</li>
+							<li>Amar Nayak<br>
+							</li>
+							<li>+917978913171</li>
+							<li>amarnayak9697@gmail.com</li>
 						</ul>
 						<div class="social-links">
-							<a href="#"><i class="fa fa-pinterest"></i></a>
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
-							<a href="#"><i class="fa fa-linkedin"></i></a>
+							<a href="#"><i class="fa fa-pinterest"></i></a> <a href="#"><i
+								class="fa fa-facebook"></i></a> <a href="#"><i
+								class="fa fa-twitter"></i></a> <a href="#"><i
+								class="fa fa-dribbble"></i></a> <a href="#"><i
+								class="fa fa-behance"></i></a> <a href="#"><i
+								class="fa fa-linkedin"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
-	</section> 
+	</section>
 
 	<!-- footer section -->
 	<footer class="footer-section spad pb-0">
@@ -549,15 +550,16 @@ for(int i=0;i<number1;i++)
 					<div class="widget-item">
 						<h4>Contact Info</h4>
 						<ul class="contact-list">
-							<li>1481 Creekside Lane <br>Avila Beach, CA 931</li>
-							<li>+53 345 7953 32453</li>
-							<li>yourmail@gmail.com</li>
+							<li>
+							</li>
+							<li>+917978913171</li>
+							<li>amarnayak9697@gmail.com</li>
 						</ul>
 					</div>
 					<div class="widget-item">
-						<h4>Engeneering</h4>
+						<h4>Interview Question</h4>
 						<ul>
-							<li><a href="">Applied Studies</a></li>
+							<li><a href="">Java Interview Question</a></li>
 							<li><a href="">Computer Engeneering</a></li>
 							<li><a href="">Software Engeneering</a></li>
 							<li><a href="">Informational Engeneering</a></li>
@@ -602,12 +604,18 @@ for(int i=0;i<number1;i++)
 					<li><a href="#">Register</a></li>
 					<li><a href="#">Privacy</a></li>
 				</ul>
-				<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+				<div class="copyright">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script>
+					All rights reserved | This template is made with <i
+						class="fa fa-heart-o" aria-hidden="true"></i> by <a
+						href="https://colorlib.com" target="_blank">Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</div>
 			</div>
 		</div>
-	</footer> 
+	</footer>
 	<!-- footer section end -->
 
 
@@ -619,27 +627,27 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/main.js"></script>
 	<style>
-	.column {
-  float: center;
-  margin: auto;
-  width: 40%;
-  padding: 20px;
-  height: 200px; /* Should be removed. Only for demonstration */
+.column {
+	float: center;
+	margin: auto;
+	width: 40%;
+	padding: 20px;
+	height: 200px; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  margin: auto;
-  clear: both;
+	content: "";
+	display: table;
+	margin: auto;
+	clear: both;
 }
-
 .slider {
 height:200px;
   display: grid;
   overflow-x: auto;
 }
+
 .button {
   display: inline-block;
   padding: 10px 35px;
@@ -662,6 +670,5 @@ height:200px;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 </style>
 </html>

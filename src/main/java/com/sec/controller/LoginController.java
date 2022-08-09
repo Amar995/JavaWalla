@@ -97,6 +97,8 @@ public class LoginController {
 
 		ModelAndView model = null;
 		User user = us.findByEmail(login.getEmail());
+		List<Jobs> joblist=getJob();
+		session.setAttribute("job", joblist);
 		List<Quiz> link1 = getQuiz();
 		session.setAttribute("xxx", link1);
 		if (user.getEmail().equals(login.getEmail()) && user.getPass().equals(login.getPass())) {
@@ -119,17 +121,13 @@ public class LoginController {
 		return link1;
 
 	}
+	public List<Jobs> getJob() {
+		List<Jobs> jobList = ser.getJobsData();
+		return jobList;
 
-	@GetMapping("/getJobs")
-	public String getJob() {
-		List<Jobs> li = it.findAll();
-		String str = null;
-		for (Jobs jo : li) {
-			str = jo.getName();
-		}
-		System.out.println(str);
-		return str;
 	}
+
+	
 
 	@GetMapping("/getQuestion")
 	public ModelAndView getQuestion() {
@@ -141,6 +139,30 @@ public class LoginController {
 	public ModelAndView getSpringBoot() {
 		ModelAndView model;
 		model = new ModelAndView("redirect:/springboot.html");
+		return model;
+	}
+	@GetMapping("/jobs")
+	public ModelAndView getJobsForm() {
+
+		ModelAndView model = null;
+
+		model = new ModelAndView("redirect:/QuizInsertion.html");
+
+		return model;
+	}
+	@PostMapping("/jobpost")
+	public ModelAndView saveJobs(Jobs job) {
+
+		ModelAndView model = null;
+
+		model = new ModelAndView("redirect:/QuizInsertion.html");
+		try {
+			it.save(job);
+			model.addObject("result", "sucess");
+		} catch (Exception e) {
+			model.addObject("result", "failed");
+
+		}
 		return model;
 	}
 }
