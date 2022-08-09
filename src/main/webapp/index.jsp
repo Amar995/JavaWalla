@@ -49,7 +49,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-3">
 					<div class="site-logo">
-						<img src="img/logo - Copy.PNG" alt="">
+						<img src="img/logo - Copy.PNG" alt="" width="50%">
 					</div>
 					<div class="nav-switch">
 						<i class="fa fa-bars"></i>
