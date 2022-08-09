@@ -111,7 +111,7 @@ List<Jobs> jobs=(List<Jobs>)session.getAttribute("job") ;
 %>
 					<table>
 						<%int number1=jobs.size();
-for(int i=0;i<number;i++)
+for(int i=0;i<number1;i++)
 {
 %>
 						<tr>
