@@ -87,6 +87,10 @@ public class LoginController {
 		ModelAndView model = null;
 		List<Quiz> link1 = getQuiz();
 		session.setAttribute("xxx", link1);
+		
+		List<Jobs> joblist=getJob();
+		session.setAttribute("job", joblist);
+		
 		model = new ModelAndView("redirect:/index.jsp");
 		return model;
 	}
