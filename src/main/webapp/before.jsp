@@ -43,7 +43,19 @@
 //document.getElementById("exam").href = examlink; 
 
 }
+<% String str=(String)session.getAttribute("user");
 
+String name=null;
+if(str==null)
+{
+	name="Sign/Sign Up";
+}
+else
+{
+	name=str;
+}
+
+%>
 </script>
 </head>
 <body>
@@ -66,7 +78,7 @@
 				<div class="col-lg-9 col-md-9">
 					<nav class="main-menu">
 						<ul>
-						<li><a  class="site-btn header-btn" id="am"><%=session.getAttribute("user")%></a></li>
+						<li><a  class="site-btn header-btn" id="am"><%=name%></a></li>
 							<li><a href="before.jsp">Home</a></li>
 							<li><a href="#">About us</a></li>
 							<li><a href="#cou">Mock Test</a></li>
@@ -83,48 +95,73 @@
 
 
 	<!-- Hero section -->
-	<section class="hero-section set-bg" data-setbg="img/bg.jpg">
+		<section class="hero-section set-bg" data-setbg="img/bg.jpg">
 		<div class="container">
 			<div class="hero-text text-white">
 				<h2>Get The Best Free Online Mock Test</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla <br> dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
 			</div>
-			
+
 			<div class="row">
-                <div class="column  slider" style="background-color:white;"  >
-                     <h2 style="color:#dc3545">Latest Quiz</h2>
-                     <!--<marquee direction="up" style="color:#dc3545">-->
-					 <%
+				<div class="column slider" style="background-color: white;">
+					<h2 style="color: #dc3545">Latest Quiz</h2>
+					<!--<marquee direction="up" style="color:#dc3545">-->
+					<%
 
-List<Quiz> qo=(List<Quiz>)session.getAttribute("xxx") ; 
+                 List<Quiz> qo=(List<Quiz>)session.getAttribute("xxx") ; 
+                      %>
+					<table>
+						<%
+						if(qo==null || qo.isEmpty()|| qo.size()==0)
+						{%>
+							<tr>
+							<td><a style="color: blue; font-size: 20px"
+								href="#cou"><b>Click Mock Test</b></a></td>
+						</tr>
+					<%	}
+						else{
+						int number=qo.size();
+                           for(int i=0;i<number;i++)
+                            {
 %>
-<table>
-	<%int number=qo.size();
-for(int i=0;i<number;i++)
-{
-%>
-<tr><td><a  style="color:blue;font-size: 20px" href=<%=qo.get(i).getLink()%> ><b><%=qo.get(i).getName()%></b></a></td></tr>
+						<tr>
+							<td><a style="color: blue; font-size: 20px"
+								href="#cou"><b><%=qo.get(i).getName()%></b></a></td>
+						</tr>
 
-<%} %></table>
-                </div>
-          <div class="column slider" style="background-color:white;">
-                   <h2 style="color:#dc3545">Latest Jobs</h2>
-                  
-					 <%
+						<%}} %>
+					</table>
+				</div>
+				<div class="column slider" style="background-color: white;">
+					<h2 style="color: #dc3545">Latest Jobs</h2>
 
-List<Jobs> qo1=(List<Jobs>)session.getAttribute("job") ; 
+					<%
+
+List<Jobs> jobs=(List<Jobs>)session.getAttribute("job") ; 
 %>
-<table>
-	<%int number1=qo1.size();
+					<table>
+					<%
+						if(jobs==null || jobs.isEmpty()|| jobs.size()==0)
+						{%>
+							<tr>
+							<td><a style="color: blue; font-size: 20px"
+								href="#cou"><b>Click Jobs Menu</b></a></td>
+						</tr>
+				<%	}
+						else{
+						 int number1=jobs.size();
 for(int i=0;i<number1;i++)
 {
 %>
-<tr><td><a  style="color:blue;font-size: 20px" href="#joi" ><b><%=qo1.get(i).getcompany()%></b></a></td></tr>
+						<tr>
+							<td><a style="color: blue; font-size: 20px"
+								href="#joi"><b><%=jobs.get(i).getcompany()%></b></a></td>
+						</tr>
 
-<%} %></table>          </div>
-          </div>
+						<%} }%>
+					</table>
+				</div>
+			</div>
 		</div>
-	</section>
 	<!-- Hero section end -->
 
 
@@ -259,26 +296,33 @@ for(int i=0;i<number1;i++)
 					dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
 			</div>
 		</div>
+		<section class="course-section spad">
+		<div class="container">
+			<div class="section-title mb-0">
+				<h2>Featured Courses</h2>
+				<p><b style="font-size: 20px">"Education is the passport to the future, for tomorrow belongs to those who prepare for it today"</b></p>
+			</div>
+		</div>
 		<div class="course-warp" id="cou">
 			<ul class="course-filter controls">
 				<li class="control active" data-filter="all">All</li>
-				<li class="control" data-filter=".finance">Spring Framework</li>
+				<li class="control" data-filter=".finance" >Spring Framework</li>
 				<li class="control" data-filter=".design">Database</li>
 				<li class="control" data-filter=".web">Web Development</li>
 				<li class="control" data-filter=".photo">Java</li>
 			</ul>
 			<div class="row course-items-area">
 				<!-- course -->
-				<div class="mix col-lg-3 col-md-4 col-sm-6 finance">
+				<div class="mix col-lg-3 col-md-4 col-sm-6 finance" >
 					<div class="course-item">
 						<div class="course-thumb set-bg" data-setbg="img/courses/1.jpg">
 
 						</div>
 						<div class="course-info">
-							<div class="course-text">
+							<div class="course-text" id="sp">
 							<form action="/getPage/springmvc" method="get">
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
-								<div class="students">120 Students</div>
+								<p>SpringMvc Moct Test Part-1</p>
+								<div class="students">26 Students</div>
 								<button class="button"><h5>Spring MVC</h5></button>
 								</form>
 							</div>
@@ -295,8 +339,8 @@ for(int i=0;i<number1;i++)
 						<div class="course-info">
 							<div class="course-text">
 									<form action="/getPage/sql" method="get">
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
-								<div class="students">120 Students</div>
+								<p>SQL Moct Test Part-1</p>
+								<div class="students">80 Students</div>
 								<button class="button"><h5>SQL</h5></button>
 								</form>
 							</div>
@@ -313,8 +357,8 @@ for(int i=0;i<number1;i++)
 						<div class="course-info">
 							<div class="course-text">
 									<form action="/getPage/html" method="get">
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
-								<div class="students">120 Students</div>
+								<p>HTML Moct Test Part-1</p>
+								<div class="students">35 Students</div>
 								<button class="button"><h5>HTML</h5></button>
 								</form>
 							</div>
@@ -331,8 +375,8 @@ for(int i=0;i<number1;i++)
 						<div class="course-info">
 							<div class="course-text">
 									<form action="/getPage/string" method="get">
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
-								<div class="students">120 Students</div>
+								<p>String Moct Test Part-1</p>
+								<div class="students">67 Students</div>
 								<button class="button"><h5>String</h5></button>
 								</form>
 							</div>
@@ -348,8 +392,8 @@ for(int i=0;i<number1;i++)
 						<div class="course-info">
 							<div class="course-text">
 								<form action="/getPage/collection" method="get">
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
-								<div class="students">120 Students</div>
+								<p>Collection Moct Test Part-1</p>
+								<div class="students">76 Students</div>
 								<button class="button"><h5>Collection</h5></button>
 								</form>
 							</div>
@@ -365,8 +409,8 @@ for(int i=0;i<number1;i++)
 						<div class="course-info">
 							<div class="course-text">
 									<form action="/getPage/multithreading" method="get">
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
-								<div class="students">120 Students</div>
+								<p>MultiThreading Moct Test Part-1</p>
+								<div class="students">0 Students</div>
 								<button class="button"><h5>MultiThreading</h5></button>
 								</form>
 							</div>
@@ -383,8 +427,8 @@ for(int i=0;i<number1;i++)
 						<div class="course-info">
 							<div class="course-text">
 									<form action="/getPage/Springboot" method="get">
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
-								<div class="students">120 Students</div>
+								<p>SpringBoot Moct Test Part-1</p>
+								<div class="students">45 Students</div>
 								<button class="button"><h5>Spring Boot</h5></button>
 								</form>
 							</div>
@@ -401,8 +445,8 @@ for(int i=0;i<number1;i++)
 						<div class="course-info">
 							<div class="course-text">
 									<form action="/getPage/mysql" method="get">
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
-								<div class="students">120 Students</div>
+								<p>Mysql Moct Test Part-1</p>
+								<div class="students">29 Students</div>
 								<button class="button"><h5>MYSQL</h5></button>
 								</form>
 							</div>
@@ -419,8 +463,8 @@ for(int i=0;i<number1;i++)
 						<div class="course-info">
 							<div class="course-text">
 									<form action="/getPage/javascript" method="get">
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
-								<div class="students">120 Students</div>
+								<p>JavaScript Moct Test Part-1</p>
+								<div class="students">56 Students</div>
 								<button class="button" style="vertical-align:middle"><h5>JavaScript</h5></button>
 								</form>
 							</div>
@@ -437,7 +481,7 @@ for(int i=0;i<number1;i++)
 						<div class="course-info">
 							<div class="course-text">
 									<form action="/getPage/exception" method="get">
-								<p>Lorem ipsum dolor sit amet, consectetur</p>
+								<p>Exception Moct Test Part-1(Coming Soon..)</p>
 								<div class="students">120 Students</div>
 								<button class="button"><h5>Exception</h5></button>
 								</form>
