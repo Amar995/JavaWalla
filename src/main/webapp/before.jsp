@@ -58,7 +58,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-3">
 					<div class="site-logo">
-<img src="img/logo - Copy.PNG" alt="">					</div>
+<img src="img/logo - Copy.PNG" alt="" width="50%">					</div>
 					<div class="nav-switch">
 						<i class="fa fa-bars"></i>
 					</div>
@@ -139,7 +139,7 @@ for(int i=0;i<number1;i++)
 				<div class="col-lg-4 col-md-6">
 					<div class="categorie-item">
 					<form action="/getQuestion" method="get">
-					<div class="ci-thumb set-bg" data-setbg="img/categories/1.jpg"></div>
+					<div class="ci-thumb set-bg" data-setbg="img/categories/Core-Java-Pro.jpg"></div>
 						<div class="ci-text">
 							<button class="button"><h5>Core Java</h5></button>
 							</form>
@@ -151,9 +151,11 @@ for(int i=0;i<number1;i++)
 				<!-- categorie -->
 				<div class="col-lg-4 col-md-6">
 					<div class="categorie-item">
-						<div class="ci-thumb set-bg" data-setbg="img/categories/2.jpg"></div>
+					<form action="/getSpringBoot" method="get">
+						<div class="ci-thumb set-bg" data-setbg="img/categories/spring-boot-logo.png"></div>
 						<div class="ci-text">
 							<button class="button"><h5>Spring Boot</h5></button>
+							</form>
 							<p>Core Java Basic Interview Question</p>
 							<span>25 Student</span>
 						</div>
@@ -162,7 +164,7 @@ for(int i=0;i<number1;i++)
 				<!-- categorie -->
 				<div class="col-lg-4 col-md-6">
 					<div class="categorie-item">
-						<div class="ci-thumb set-bg" data-setbg="img/categories/3.jpg"></div>
+						<div class="ci-thumb set-bg" data-setbg="img/categories/jo.jpg"></div>
 						<div class="ci-text">
 						<button class="button">	<h5><a href="https://javawalla.blogspot.com">Jobs</a></h5></button>
 							<p>Core Java Basic Interview Question</p>

@@ -137,4 +137,10 @@ public class LoginController {
 		model = new ModelAndView("redirect:/javainterview.html");
 		return model;
 	}
+	@GetMapping("/getSpringBoot")
+	public ModelAndView getSpringBoot() {
+		ModelAndView model;
+		model = new ModelAndView("redirect:/springboot.html");
+		return model;
+	}
 }
