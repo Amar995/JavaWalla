@@ -7,13 +7,15 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.sec.dao.HtmlInterface;
+import com.sec.dao.ItJobsInter;
 import com.sec.dao.QuizInterface;
 import com.sec.dao.UserInterface1;
+import com.sec.model.Jobs;
 import com.sec.model.LoginCredential;
 import com.sec.model.Quiz;
 import com.sec.model.User;
@@ -26,6 +28,13 @@ public class LoginController {
 
 	@Autowired
 	QuizInterface quiz;
+
+	@Autowired
+	ItJobsInter it;
+
+	@Autowired
+	HtmlInterface fc;
+
 	@Autowired
 	QuizService ser;
 
@@ -35,7 +44,7 @@ public class LoginController {
 		try {
 			us.save(user);
 			HttpSession session = req.getSession();
-		
+
 			session.setAttribute("user", user.getName());
 			model = new ModelAndView("redirect:/before.jsp");
 		} catch (Exception e) {
@@ -97,7 +106,7 @@ public class LoginController {
 
 			// model.addObject("link",
 			// "https://docs.google.com/forms/d/1M2ABFVgz4e5TH2Z71sFrV4kIr-cpyREaUQBfOwP4Pq0/edit");
-			//model.addObject("quiz12", link1.get(0).getName());
+			// model.addObject("quiz12", link1.get(0).getName());
 			return model;
 		} else {
 			model = new ModelAndView("redirect:/failed.html");
@@ -109,5 +118,23 @@ public class LoginController {
 		List<Quiz> link1 = ser.getData();
 		return link1;
 
+	}
+
+	@GetMapping("/getJobs")
+	public String getJob() {
+		List<Jobs> li = it.findAll();
+		String str = null;
+		for (Jobs jo : li) {
+			str = jo.getName();
+		}
+		System.out.println(str);
+		return str;
+	}
+
+	@GetMapping("/getQuestion")
+	public ModelAndView getQuestion() {
+		ModelAndView model;
+		model = new ModelAndView("redirect:/javainterview.html");
+		return model;
 	}
 }

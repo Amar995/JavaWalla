@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>JavaWalla - Education Template</title>
+<title>JavaWalla - Free Education</title>
 <meta charset="UTF-8">
 <meta name="description" content="WebUni Education Template">
 <meta name="keywords" content="webuni, education, creative, html">
@@ -49,7 +49,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-3">
 					<div class="site-logo">
-						<img src="img/logo.png" alt="">
+						<img src="img/logo - Copy.PNG" alt="">
 					</div>
 					<div class="nav-switch">
 						<i class="fa fa-bars"></i>
@@ -64,7 +64,7 @@
 							<li><a href="#cou">Mock Test</a></li>
 							<li><a href="blog.html">News</a></li>
 							<li><a href="#con">Contact</a></li>
-							<li><a href="#jobs">Jobs</a></li>
+							<li><a href="https://javawalla.blogspot.com/">Jobs</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -79,11 +79,6 @@
 		<div class="container">
 			<div class="hero-text text-white">
 				<h2>Get The Best Free Online Mock Test</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-					malesuada lorem maximus mauris scelerisque, at rutrum nulla <br>
-					dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
-				</p>
 			</div>
 
 			<div class="row">
@@ -101,7 +96,7 @@ for(int i=0;i<number;i++)
 %>
 						<tr>
 							<td><a style="color: blue; font-size: 20px"
-								href=<%=qo.get(i).getLink()%>><b><%=qo.get(i).getName()%></b></a></td>
+								href="#cou"><b><%=qo.get(i).getName()%></b></a></td>
 						</tr>
 
 						<%} %>
@@ -137,20 +132,19 @@ for(int i=0;i<number;i++)
 	<section class="categories-section spad">
 		<div class="container">
 			<div class="section-title" id="jobs">
-				<h2>Jobs For You</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla
-					dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+				<h2>Course For You</h2>
 			</div>
 			<div class="row">
 				<!-- categorie -->
 				<div class="col-lg-4 col-md-6">
 					<div class="categorie-item">
-						<div class="ci-thumb set-bg" data-setbg="img/categories/1.jpg"></div>
+					<form action="/getQuestion" method="get">
+					<div class="ci-thumb set-bg" data-setbg="img/categories/1.jpg"></div>
 						<div class="ci-text">
-							<h5>IT Development</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur</p>
-							<span>120 Courses</span>
+							<button class="button"><h5>Core Java</h5></button>
+							</form>
+							<p>Core Java Basic Interview Question</p>
+							<span>120 Student</span>
 						</div>
 					</div>
 				</div>
@@ -159,9 +153,9 @@ for(int i=0;i<number;i++)
 					<div class="categorie-item">
 						<div class="ci-thumb set-bg" data-setbg="img/categories/2.jpg"></div>
 						<div class="ci-text">
-							<h5>Web Design</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur</p>
-							<span>70 Courses</span>
+							<button class="button"><h5>Spring Boot</h5></button>
+							<p>Core Java Basic Interview Question</p>
+							<span>25 Student</span>
 						</div>
 					</div>
 				</div>
@@ -170,14 +164,14 @@ for(int i=0;i<number;i++)
 					<div class="categorie-item">
 						<div class="ci-thumb set-bg" data-setbg="img/categories/3.jpg"></div>
 						<div class="ci-text">
-							<h5>Illustration & Drawing</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur</p>
+						<button class="button">	<h5><a href="https://javawalla.blogspot.com">Jobs</a></h5></button>
+							<p>Core Java Basic Interview Question</p>
 							<span>55 Courses</span>
 						</div>
 					</div>
 				</div>
 				<!-- categorie -->
-				<div class="col-lg-4 col-md-6">
+				<!-- <div class="col-lg-4 col-md-6">
 					<div class="categorie-item">
 						<div class="ci-thumb set-bg" data-setbg="img/categories/4.jpg"></div>
 						<div class="ci-text">
@@ -187,7 +181,7 @@ for(int i=0;i<number;i++)
 						</div>
 					</div>
 				</div>
-				<!-- categorie -->
+				<!-- categorie 
 				<div class="col-lg-4 col-md-6">
 					<div class="categorie-item">
 						<div class="ci-thumb set-bg" data-setbg="img/categories/5.jpg"></div>
@@ -198,7 +192,7 @@ for(int i=0;i<number;i++)
 						</div>
 					</div>
 				</div>
-				<!-- categorie -->
+				<!-- categorie 
 				<div class="col-lg-4 col-md-6">
 					<div class="categorie-item">
 						<div class="ci-thumb set-bg" data-setbg="img/categories/6.jpg"></div>
@@ -208,7 +202,7 @@ for(int i=0;i<number;i++)
 							<span>25 Courses</span>
 						</div>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</section>
@@ -247,31 +241,31 @@ for(int i=0;i<number;i++)
 		<div class="container">
 			<div class="section-title mb-0">
 				<h2>Featured Courses</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla
-					dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+				<p><b style="font-size: 20px">"Education is the passport to the future, for tomorrow belongs to those who prepare for it today"</b></p>
 			</div>
 		</div>
 		<div class="course-warp" id="cou">
 			<ul class="course-filter controls">
 				<li class="control active" data-filter="all">All</li>
-				<li class="control" data-filter=".finance">Spring Framework</li>
+				<li class="control" data-filter=".finance" >Spring Framework</li>
 				<li class="control" data-filter=".design">Database</li>
 				<li class="control" data-filter=".web">Web Development</li>
 				<li class="control" data-filter=".photo">Java</li>
 			</ul>
 			<div class="row course-items-area">
 				<!-- course -->
-				<div class="mix col-lg-3 col-md-4 col-sm-6 finance">
+				<div class="mix col-lg-3 col-md-4 col-sm-6 finance" >
 					<div class="course-item">
 						<div class="course-thumb set-bg" data-setbg="img/courses/1.jpg">
 
 						</div>
 						<div class="course-info">
-							<div class="course-text">
-								<h5>Spring MVC</h5>
+							<div class="course-text" id="sp">
+							<form action="/getPage/springmvc" method="get">
 								<p>Lorem ipsum dolor sit amet, consectetur</p>
 								<div class="students">120 Students</div>
+								<button class="button"><h5>Spring MVC</h5></button>
+								</form>
 							</div>
 
 						</div>
@@ -285,9 +279,11 @@ for(int i=0;i<number;i++)
 						</div>
 						<div class="course-info">
 							<div class="course-text">
-								<h5>SQL</h5>
+									<form action="/getPage/sql" method="get">
 								<p>Lorem ipsum dolor sit amet, consectetur</p>
 								<div class="students">120 Students</div>
+								<button class="button"><h5>SQL</h5></button>
+								</form>
 							</div>
 
 						</div>
@@ -301,9 +297,11 @@ for(int i=0;i<number;i++)
 						</div>
 						<div class="course-info">
 							<div class="course-text">
-								<h5>HTML</h5>
+									<form action="/getPage/html" method="get">
 								<p>Lorem ipsum dolor sit amet, consectetur</p>
 								<div class="students">120 Students</div>
+								<button class="button"><h5>HTML</h5></button>
+								</form>
 							</div>
 
 						</div>
@@ -317,9 +315,11 @@ for(int i=0;i<number;i++)
 						</div>
 						<div class="course-info">
 							<div class="course-text">
-								<h5>Collection</h5>
+									<form action="/getPage/string" method="get">
 								<p>Lorem ipsum dolor sit amet, consectetur</p>
 								<div class="students">120 Students</div>
+								<button class="button"><h5>String</h5></button>
+								</form>
 							</div>
 
 						</div>
@@ -332,9 +332,11 @@ for(int i=0;i<number;i++)
 						</div>
 						<div class="course-info">
 							<div class="course-text">
-								<h5>MultiThreading</h5>
+								<form action="/getPage/collection" method="get">
 								<p>Lorem ipsum dolor sit amet, consectetur</p>
 								<div class="students">120 Students</div>
+								<button class="button"><h5>Collection</h5></button>
+								</form>
 							</div>
 
 						</div>
@@ -347,9 +349,11 @@ for(int i=0;i<number;i++)
 						</div>
 						<div class="course-info">
 							<div class="course-text">
-								<h5>Exception Handling</h5>
+									<form action="/getPage/multithreading" method="get">
 								<p>Lorem ipsum dolor sit amet, consectetur</p>
 								<div class="students">120 Students</div>
+								<button class="button"><h5>MultiThreading</h5></button>
+								</form>
 							</div>
 
 						</div>
@@ -363,9 +367,11 @@ for(int i=0;i<number;i++)
 						</div>
 						<div class="course-info">
 							<div class="course-text">
-								<h5>Spring Boot</h5>
+									<form action="/getPage/Springboot" method="get">
 								<p>Lorem ipsum dolor sit amet, consectetur</p>
 								<div class="students">120 Students</div>
+								<button class="button"><h5>Spring Boot</h5></button>
+								</form>
 							</div>
 
 						</div>
@@ -379,9 +385,11 @@ for(int i=0;i<number;i++)
 						</div>
 						<div class="course-info">
 							<div class="course-text">
-								<h5>MYSQL</h5>
+									<form action="/getPage/mysql" method="get">
 								<p>Lorem ipsum dolor sit amet, consectetur</p>
 								<div class="students">120 Students</div>
+								<button class="button"><h5>MYSQL</h5></button>
+								</form>
 							</div>
 
 						</div>
@@ -395,9 +403,11 @@ for(int i=0;i<number;i++)
 						</div>
 						<div class="course-info">
 							<div class="course-text">
-								<h5>Javascript</h5>
+									<form action="/getPage/javascript" method="get">
 								<p>Lorem ipsum dolor sit amet, consectetur</p>
 								<div class="students">120 Students</div>
+								<button class="button" style="vertical-align:middle"><h5>JavaScript</h5></button>
+								</form>
 							</div>
 
 						</div>
@@ -411,9 +421,11 @@ for(int i=0;i<number;i++)
 						</div>
 						<div class="course-info">
 							<div class="course-text">
-								<h5>String</h5>
+									<form action="/getPage/exception" method="get">
 								<p>Lorem ipsum dolor sit amet, consectetur</p>
 								<div class="students">120 Students</div>
+								<button class="button"><h5>Exception</h5></button>
+								</form>
 							</div>
 
 						</div>
@@ -534,9 +546,9 @@ for(int i=0;i<number;i++)
 						</ul>
 					</div>
 					<div class="widget-item">
-						<h4>Engeneering</h4>
+						<h4>Interview Question</h4>
 						<ul>
-							<li><a href="">Applied Studies</a></li>
+							<li><a href="">Java Interview Question</a></li>
 							<li><a href="">Computer Engeneering</a></li>
 							<li><a href="">Software Engeneering</a></li>
 							<li><a href="">Informational Engeneering</a></li>
@@ -623,6 +635,29 @@ for(int i=0;i<number;i++)
 height:200px;
   display: grid;
   overflow-x: auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 35px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #d82a4e;;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 </style>
 </html>
