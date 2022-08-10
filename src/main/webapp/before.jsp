@@ -14,7 +14,7 @@
 	<meta name="keywords" content="webuni, education, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->   
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<link href="img/fav1.png" rel="shortcut icon"/>
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
@@ -103,7 +103,7 @@ else
 
 			<div class="row">
 				<div class="column slider" style="background-color: white;">
-					<h2 style="color: #dc3545">Latest Quiz</h2>
+					<h2 style="color:Black">Latest Quiz</h2>
 					<!--<marquee direction="up" style="color:#dc3545">-->
 					<%
 
@@ -114,7 +114,7 @@ else
 						if(qo==null || qo.isEmpty()|| qo.size()==0)
 						{%>
 							<tr>
-							<td><a style="color: blue; font-size: 20px"
+							<td><a style="color: #dc3545; font-size: 20px"
 								href="#cou"><b>Click Mock Test</b></a></td>
 						</tr>
 					<%	}
@@ -124,7 +124,7 @@ else
                             {
 %>
 						<tr>
-							<td><a style="color: blue; font-size: 20px"
+							<td><a style="color: #dc3545; font-size: 20px"
 								href="#cou"><b><%=qo.get(i).getName()%></b></a></td>
 						</tr>
 
@@ -132,7 +132,7 @@ else
 					</table>
 				</div>
 				<div class="column slider" style="background-color: white;">
-					<h2 style="color: #dc3545">Latest Jobs</h2>
+					<h2 style="color:Black">Latest Jobs</h2>
 
 					<%
 
@@ -143,7 +143,7 @@ List<Jobs> jobs=(List<Jobs>)session.getAttribute("job") ;
 						if(jobs==null || jobs.isEmpty()|| jobs.size()==0)
 						{%>
 							<tr>
-							<td><a style="color: blue; font-size: 20px"
+							<td><a style="color: #dc3545; font-size: 20px"
 								href="#cou"><b>Click Jobs Menu</b></a></td>
 						</tr>
 				<%	}
@@ -153,7 +153,7 @@ for(int i=0;i<number1;i++)
 {
 %>
 						<tr>
-							<td><a style="color: blue; font-size: 20px"
+							<td><a style="color: #dc3545; font-size: 20px"
 								href="#joi"><b><%=jobs.get(i).getcompany()%></b></a></td>
 						</tr>
 
