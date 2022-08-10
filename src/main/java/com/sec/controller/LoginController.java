@@ -1,5 +1,6 @@
 package com.sec.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,10 +12,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.sec.dao.CountIn;
 import com.sec.dao.HtmlInterface;
 import com.sec.dao.ItJobsInter;
 import com.sec.dao.QuizInterface;
 import com.sec.dao.UserInterface1;
+import com.sec.model.Countcheck;
 import com.sec.model.Jobs;
 import com.sec.model.LoginCredential;
 import com.sec.model.Quiz;
@@ -31,6 +34,8 @@ public class LoginController {
 
 	@Autowired
 	ItJobsInter it;
+	@Autowired
+	CountIn in;
 
 	@Autowired
 	HtmlInterface fc;
@@ -47,6 +52,10 @@ public class LoginController {
 
 			session.setAttribute("user", user.getName());
 			model = new ModelAndView("redirect:/before.jsp");
+			Countcheck c = new Countcheck();
+			c.setCount(1);
+			c.setDate(new Date());
+			in.save(c);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -84,13 +93,18 @@ public class LoginController {
 	public ModelAndView jsp(HttpServletRequest req) {
 		HttpSession session = req.getSession();
 
+		Countcheck c = new Countcheck();
+		c.setCount(1);
+		c.setDate(new Date());
+		in.save(c);
+
 		ModelAndView model = null;
 		List<Quiz> link1 = getQuiz();
 		session.setAttribute("xxx", link1);
-		
-		List<Jobs> joblist=getJob();
+
+		List<Jobs> joblist = getJob();
 		session.setAttribute("job", joblist);
-		
+
 		model = new ModelAndView("redirect:/index.jsp");
 		return model;
 	}
@@ -98,10 +112,13 @@ public class LoginController {
 	@PostMapping("/userlogin")
 	public ModelAndView login(LoginCredential login, HttpServletRequest req) {
 		HttpSession session = req.getSession();
-
+		Countcheck c = new Countcheck();
+		c.setCount(1);
+		c.setDate(new Date());
+		in.save(c);
 		ModelAndView model = null;
 		User user = us.findByEmail(login.getEmail());
-		List<Jobs> joblist=getJob();
+		List<Jobs> joblist = getJob();
 		session.setAttribute("job", joblist);
 		List<Quiz> link1 = getQuiz();
 		session.setAttribute("xxx", link1);
@@ -125,26 +142,36 @@ public class LoginController {
 		return link1;
 
 	}
+
 	public List<Jobs> getJob() {
 		List<Jobs> jobList = ser.getJobsData();
+
 		return jobList;
 
 	}
 
-	
-
 	@GetMapping("/getQuestion")
 	public ModelAndView getQuestion() {
+		Countcheck c = new Countcheck();
+		c.setCount(1);
+		c.setDate(new Date());
+		in.save(c);
 		ModelAndView model;
 		model = new ModelAndView("redirect:/javainterview.html");
 		return model;
 	}
+
 	@GetMapping("/getSpringBoot")
 	public ModelAndView getSpringBoot() {
+		Countcheck c = new Countcheck();
+		c.setCount(1);
+		c.setDate(new Date());
+		in.save(c);
 		ModelAndView model;
 		model = new ModelAndView("redirect:/springboot.html");
 		return model;
 	}
+
 	@GetMapping("/jobs")
 	public ModelAndView getJobsForm() {
 
@@ -154,6 +181,7 @@ public class LoginController {
 
 		return model;
 	}
+
 	@PostMapping("/jobpost")
 	public ModelAndView saveJobs(Jobs job) {
 
