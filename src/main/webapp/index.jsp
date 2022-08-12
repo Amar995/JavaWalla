@@ -12,8 +12,6 @@
 <head>
 <title>JavaWalla - Free Education</title>
 <meta charset="UTF-8">
-<meta name="description" content="WebUni Education Template">
-<meta name="keywords" content="webuni, education, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Favicon -->

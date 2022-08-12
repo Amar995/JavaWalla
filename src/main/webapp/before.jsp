@@ -10,8 +10,7 @@
 <head>
 	<title>JavaWalla - Education Template</title>
 	<meta charset="UTF-8">
-	<meta name="description" content="WebUni Education Template">
-	<meta name="keywords" content="webuni, education, creative, html">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->   
 	<link href="img/fav1.png" rel="shortcut icon"/>
