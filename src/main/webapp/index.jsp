@@ -300,7 +300,7 @@
 							<div class="course-text" id="sp">
 							<form action="/getPage/springmvc" method="get">
 								<p>SpringMvc Moct Test Part-1</p>
-								<div class="students">26 Students</div>
+								<div class="students">33 Students</div>
 								<button class="button"><h5>Spring MVC</h5></button>
 								</form>
 							</div>
@@ -317,7 +317,7 @@
 						<div class="course-info">
 							<div class="course-text" id="sp">
 							<form action="/getPage/list" method="get">
-								<p>SpringMvc Moct Test Part-1</p>
+								<p>List Collection Mock Test Part-1</p>
 								<div class="students">26 Students</div>
 								<button class="button"><h5>List Part-1</h5></button>
 								</form>
@@ -334,7 +334,7 @@
 						<div class="course-info">
 							<div class="course-text" id="sp">
 							<form action="/getPage/set" method="get">
-								<p>SpringMvc Moct Test Part-1</p>
+								<p>Set Collection  Moct Test Part-1</p>
 								<div class="students">26 Students</div>
 								<button class="button"><h5>Set Part-1</h5></button>
 								</form>
