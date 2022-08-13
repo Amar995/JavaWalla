@@ -8,6 +8,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>
+</script>
 	<title>JavaWalla - Education Template</title>
 	<meta charset="UTF-8">
 
@@ -290,15 +292,6 @@ for(int i=0;i<number1;i++)
 		<div class="container">
 			<div class="section-title mb-0">
 				<h2>Featured Courses</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla
-					dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-			</div>
-		</div>
-		<section class="course-section spad">
-		<div class="container">
-			<div class="section-title mb-0">
-				<h2>Featured Courses</h2>
 				<p><b style="font-size: 20px">"Education is the passport to the future, for tomorrow belongs to those who prepare for it today"</b></p>
 			</div>
 		</div>
@@ -308,8 +301,24 @@ for(int i=0;i<number1;i++)
 				<li class="control" data-filter=".finance" >Spring Framework</li>
 				<li class="control" data-filter=".design">Database</li>
 				<li class="control" data-filter=".web">Web Development</li>
-				<li class="control" data-filter=".photo">Java</li>
-			</ul>
+                   <li>
+                   
+<!-- Example split danger button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-danger">Java</button>
+  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item"  data-filter=".lsm">Collection</a>
+   <!--   <a class="dropdown-item" href="#">Exception</a>
+    <a class="dropdown-item" href="#">MultiThraeding</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">String</a>-->
+  </div>
+</div>
+				</li>
+			</ul>		
 			<div class="row course-items-area">
 				<!-- course -->
 				<div class="mix col-lg-3 col-md-4 col-sm-6 finance" >
@@ -323,6 +332,41 @@ for(int i=0;i<number1;i++)
 								<p>SpringMvc Moct Test Part-1</p>
 								<div class="students">26 Students</div>
 								<button class="button"><h5>Spring MVC</h5></button>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+		
+					<div class="mix col-lg-3 col-md-4 col-sm-6 lsm"  style="display:none">
+					<div class="course-item">
+						<div class="course-thumb set-bg" data-setbg="img/courses/1.jpg">
+
+						</div>
+						<div class="course-info">
+							<div class="course-text" id="sp">
+							<form action="/getPage/list" method="get">
+								<p>SpringMvc Moct Test Part-1</p>
+								<div class="students">26 Students</div>
+								<button class="button"><h5>List Part-1</h5></button>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+					<div class="mix col-lg-3 col-md-4 col-sm-6 lsm"  style="display:none">
+					<div class="course-item">
+						<div class="course-thumb set-bg" data-setbg="img/courses/1.jpg">
+
+						</div>
+						<div class="course-info">
+							<div class="course-text" id="sp">
+							<form action="/getPage/set" method="get">
+								<p>SpringMvc Moct Test Part-1</p>
+								<div class="students">26 Students</div>
+								<button class="button"><h5>Set Part-1</h5></button>
 								</form>
 							</div>
 
@@ -536,7 +580,7 @@ for(int i=0;i<number1;i++)
 		</div>
 	</section>
 	banner section end    -->
-<section class="contact-page spad pb-0" id="con">
+	<section class="contact-page spad pb-0" id="con">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
@@ -546,15 +590,15 @@ for(int i=0;i<number1;i++)
 							<p></p>
 						</div>
 						<form class="contact-form">
-							<input type="text" placeholder="Your Name">
-							<input type="text" placeholder="Your E-mail">
-							<input type="text" placeholder="Subject">
+							<input type="text" placeholder="Your Name"> <input
+								type="text" placeholder="Your E-mail"> <input
+								type="text" placeholder="Subject">
 							<textarea placeholder="Message"></textarea>
 							<button class="site-btn">Sent Message</button>
 						</form>
 					</div>
 				</div>
-<div class="col-lg-4">
+				<div class="col-lg-4">
 					<div class="contact-info-area">
 						<div class="section-title text-left p-0">
 							<h2>Contact Info</h2>
@@ -653,7 +697,7 @@ for(int i=0;i<number1;i++)
 					<script>document.write(new Date().getFullYear());</script>
 					All rights reserved | This template is made with <i
 						class="fa fa-heart-o" aria-hidden="true"></i> by <a
-						href="https://colorlib.com" target="_blank">Colorlib</a>
+						href="" target="_blank">Java Walla</a>
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				</div>
 			</div>
@@ -714,4 +758,5 @@ height:200px;
   transform: translateY(4px);
 }
 </style>
-</html>
+	
+	</html>

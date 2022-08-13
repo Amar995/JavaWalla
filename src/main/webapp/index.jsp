@@ -10,8 +10,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>
+</script>
 <title>JavaWalla - Free Education</title>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Favicon -->
@@ -268,8 +271,24 @@
 				<li class="control" data-filter=".finance" >Spring Framework</li>
 				<li class="control" data-filter=".design">Database</li>
 				<li class="control" data-filter=".web">Web Development</li>
-				<li class="control" data-filter=".photo">Java</li>
-			</ul>
+                   <li>
+                   
+<!-- Example split danger button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-danger">Java</button>
+  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item"  data-filter=".lsm">Collection</a>
+   <!-- <a class="dropdown-item" href="#">Exception</a>
+    <a class="dropdown-item" href="#">MultiThraeding</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">String</a> -->
+  </div>
+</div>
+				</li>
+			</ul>		
 			<div class="row course-items-area">
 				<!-- course -->
 				<div class="mix col-lg-3 col-md-4 col-sm-6 finance" >
@@ -283,6 +302,41 @@
 								<p>SpringMvc Moct Test Part-1</p>
 								<div class="students">26 Students</div>
 								<button class="button"><h5>Spring MVC</h5></button>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+		
+					<div class="mix col-lg-3 col-md-4 col-sm-6 lsm"  style="display:none">
+					<div class="course-item">
+						<div class="course-thumb set-bg" data-setbg="img/courses/1.jpg">
+
+						</div>
+						<div class="course-info">
+							<div class="course-text" id="sp">
+							<form action="/getPage/list" method="get">
+								<p>SpringMvc Moct Test Part-1</p>
+								<div class="students">26 Students</div>
+								<button class="button"><h5>List Part-1</h5></button>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+					<div class="mix col-lg-3 col-md-4 col-sm-6 lsm"  style="display:none">
+					<div class="course-item">
+						<div class="course-thumb set-bg" data-setbg="img/courses/1.jpg">
+
+						</div>
+						<div class="course-info">
+							<div class="course-text" id="sp">
+							<form action="/getPage/set" method="get">
+								<p>SpringMvc Moct Test Part-1</p>
+								<div class="students">26 Students</div>
+								<button class="button"><h5>Set Part-1</h5></button>
 								</form>
 							</div>
 
